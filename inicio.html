@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Emprendimientos</title>
+<style>
+  :root{
+    --ink:#20231F;
+    --ink-soft:#5B6058;
+    --stone:#F5F3EC;
+    --card:#FFFFFF;
+    --line:#DEDACB;
+    --line-strong:#C7C1A9;
+    --brick:#9C4A2C;
+    --brick-soft:#EAD6C9;
+    --moss:#41543A;
+    --moss-soft:#DEE6D6;
+    --gold:#8A6A2E;
+    --gold-soft:#EFE2C4;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--stone);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ text-decoration:none; color:inherit; }
+
+  header{ padding:40px 20px 20px; max-width:720px; margin:0 auto; }
+  header h1{ font-size:24px; font-weight:600; margin:0 0 6px; letter-spacing:-0.01em; }
+  header p{ font-size:14px; color:var(--ink-soft); margin:0; }
+
+  main{ max-width:720px; margin:0 auto; padding:10px 20px 60px; }
+
+  .proyecto{
+    display:block;
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:18px 18px; margin-bottom:12px;
+    transition:border-color .15s ease;
+  }
+  .proyecto:active{ border-color:var(--line-strong); }
+  .proyecto-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:6px; }
+  .proyecto-nombre{ font-size:17px; font-weight:600; }
+  .proyecto-barrio{ font-size:13px; color:var(--ink-soft); margin-top:2px; }
+  .badge{
+    font-size:11px; padding:3px 10px; border-radius:20px; white-space:nowrap; flex:none;
+  }
+  .badge.construccion{ background:var(--moss-soft); color:var(--moss); }
+  .badge.inicio{ background:var(--gold-soft); color:var(--gold); }
+  .badge.desarrollo{ background:var(--line); color:var(--ink-soft); }
+  .proyecto-meta{ font-size:13px; color:var(--ink-soft); margin-top:10px; display:flex; gap:14px; flex-wrap:wrap; }
+  .proyecto-meta span b{ color:var(--ink); font-weight:600; }
+  .arrow{ font-size:13px; color:var(--brick); margin-top:10px; font-weight:600; }
+
+  footer{ max-width:720px; margin:0 auto; padding:0 20px 40px; font-size:12px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Nuestros emprendimientos</h1>
+  <p>Elegí un proyecto para ver la información completa.</p>
+</header>
+
+<main>
+  <a class="proyecto" href="pedro-i-rivera-5026.html">
+    <div class="proyecto-top">
+      <div>
+        <div class="proyecto-nombre">Pedro I. Rivera 5026</div>
+        <div class="proyecto-barrio">Villa Urquiza, CABA</div>
+      </div>
+      <span class="badge construccion">En construcción</span>
+    </div>
+    <div class="proyecto-meta"><span>Entrega: <b>octubre 2027</b></span></div>
+    <div class="arrow">Ver proyecto →</div>
+  </a>
+
+  <a class="proyecto" href="olazabal-5451.html">
+    <div class="proyecto-top">
+      <div>
+        <div class="proyecto-nombre">Olazábal 5451</div>
+        <div class="proyecto-barrio">Villa Urquiza, CABA</div>
+      </div>
+      <span class="badge construccion">En construcción</span>
+    </div>
+    <div class="proyecto-meta"><span>Entrega: <b>octubre 2027</b></span></div>
+    <div class="arrow">Ver proyecto →</div>
+  </a>
+
+  <a class="proyecto" href="arganaras-64.html">
+    <div class="proyecto-top">
+      <div>
+        <div class="proyecto-nombre">Argañaras 64</div>
+        <div class="proyecto-barrio">Villa Crespo, CABA</div>
+      </div>
+      <span class="badge inicio">Inicio de obra</span>
+    </div>
+    <div class="proyecto-meta"><span>Entrega: <b>diciembre 2028</b></span></div>
+    <div class="arrow">Ver proyecto →</div>
+  </a>
+
+  <a class="proyecto" href="cullen-4927.html">
+    <div class="proyecto-top">
+      <div>
+        <div class="proyecto-nombre">Cullen 4927</div>
+        <div class="proyecto-barrio">Villa Urquiza, CABA</div>
+      </div>
+      <span class="badge desarrollo">Compra de terreno</span>
+    </div>
+    <div class="proyecto-meta"><span>Inicio: <b>marzo 2027</b></span><span>Entrega: <b>marzo 2029</b></span></div>
+    <div class="arrow">Ver proyecto →</div>
+  </a>
+
+  <a class="proyecto" href="manuela-pedraza-2349.html">
+    <div class="proyecto-top">
+      <div>
+        <div class="proyecto-nombre">Manuela Pedraza 2349</div>
+        <div class="proyecto-barrio">Núñez, CABA</div>
+      </div>
+      <span class="badge desarrollo">Desarrollo y planos</span>
+    </div>
+    <div class="proyecto-meta"><span>Sin fecha estimada aún</span></div>
+    <div class="arrow">Ver proyecto →</div>
+  </a>
+</main>
+
+<footer>
+  Para que los links funcionen, guardá todos los archivos en la misma carpeta.
+</footer>
+
+</body>
+</html>
