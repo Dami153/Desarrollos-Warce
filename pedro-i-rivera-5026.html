@@ -109,6 +109,9 @@
   .map-wrap{ border-radius:10px; overflow:hidden; border:1px solid var(--line); margin-top:12px; background:var(--card); }
   .map-wrap img{ width:100%; display:block; }
   .map-link{ display:inline-block; margin-top:10px; font-size:14px; }
+  .entorno-cols{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:14px; }
+  .entorno-cols h4{ font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-soft); margin:0 0 8px; }
+  .entorno-cols ul{ margin:0; padding-left:16px; font-size:13px; line-height:1.7; }
   .map-cta{ display:block; text-align:center; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; margin-top:12px; font-weight:600; font-size:15px; text-decoration:none; color:var(--ink); }
 
   .cta{
@@ -123,66 +126,6 @@
   }
 
   footer.legal{ font-size:11px; color:var(--ink-soft); padding:20px 20px 40px; max-width:760px; margin:0 auto; line-height:1.6; }
-
-  /* ---------- PRIVADO ---------- */
-  .privado-toggle{
-    max-width:760px; margin:0 auto; padding:18px 20px 0;
-    text-align:center;
-  }
-  .privado-toggle button{
-    background:none; border:1px solid var(--line-strong); color:var(--ink-soft);
-    font-size:12px; padding:6px 14px; border-radius:20px; cursor:pointer;
-  }
-
-  #privado{ max-width:760px; margin:0 auto; padding:18px 20px 60px; display:none; }
-  #privado.open{ display:block; }
-
-  .lock-card{
-    background:var(--card); border:1px solid var(--line); border-radius:12px;
-    padding:22px; max-width:360px; margin:20px auto;
-  }
-  .lock-card h3{ margin:0 0 6px; font-size:16px; }
-  .lock-card p{ margin:0 0 14px; font-size:13px; color:var(--ink-soft); line-height:1.5; }
-  .lock-card input{
-    width:100%; padding:10px 12px; border:1px solid var(--line-strong); border-radius:7px;
-    font-size:14px; margin-bottom:10px;
-  }
-  .lock-card button.primary{
-    width:100%; padding:10px; border:none; border-radius:8px;
-    background:var(--ink); color:#fff; font-weight:600; font-size:14px; cursor:pointer;
-  }
-  .lock-error{ color:var(--brick); font-size:12px; margin:-4px 0 10px; display:none; }
-
-  #privado-panel{ display:none; }
-  #privado-panel.open{ display:block; }
-
-  .card{
-    background:var(--card); border:1px solid var(--line); border-radius:10px;
-    padding:16px; margin-bottom:14px;
-  }
-  .card h3{ margin:0 0 12px; font-size:14px; font-weight:600; }
-  .stat-priv{
-    display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:12px;
-  }
-  .stat-priv .box{ background:var(--stone); border-radius:8px; padding:10px 12px; }
-  .stat-priv .box .label{ font-size:11px; color:var(--ink-soft); }
-  .stat-priv .box .value{ font-size:16px; font-weight:600; }
-  .row-item{
-    display:flex; justify-content:space-between; font-size:13px; padding:6px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .row-item:last-child{ border-bottom:none; }
-  .row-item .neg{ color:var(--brick); }
-  ul.plain{ margin:0; padding-left:18px; font-size:13px; line-height:1.6; }
-  .change-pass{ margin-top:18px; }
-  .change-pass summary{ font-size:12px; color:var(--ink-soft); cursor:pointer; }
-  .change-pass .inner{ margin-top:10px; }
-  .small-note{ font-size:11px; color:var(--ink-soft); margin-top:10px; line-height:1.5; }
-
-  table.price-table{ width:100%; border-collapse:collapse; font-size:12px; }
-  table.price-table th{ text-align:left; color:var(--ink-soft); font-weight:600; padding:6px 4px; border-bottom:1px solid var(--line-strong); }
-  table.price-table td{ padding:6px 4px; border-bottom:1px solid var(--line); }
-  table.price-table tr.no-disp td{ color:var(--ink-soft); font-style:italic; }
 </style>
 </head>
 <body>
@@ -249,6 +192,30 @@
     <h2 class="h2">Ubicación</h2>
     <p class="lede">Dr. Pedro Ignacio Rivera 5026, Villa Urquiza, CABA.</p>
     <a class="map-cta" href="https://www.google.com/maps/search/?api=1&query=-34.5718241,-58.4876921" target="_blank" rel="noopener">📍 Ver ubicación en Google Maps ↗</a>
+    <div class="entorno-cols">
+      <div>
+        <h4>Subte y tren</h4>
+        <ul>
+          <li>Estación Juan Manuel de Rosas (Línea B)</li>
+          <li>Estación Urquiza (tren Mitre)</li>
+        </ul>
+        <h4 style="margin-top:14px;">Espacios verdes</h4>
+        <ul>
+          <li>Plaza Jorge Casal</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Comercial</h4>
+        <ul>
+          <li>Corredor Av. Triunvirato</li>
+        </ul>
+        <h4 style="margin-top:14px;">Salud</h4>
+        <ul>
+          <li>Hospital Italiano (sede Triunvirato)</li>
+          <li>CIMU Centro Médico Urquiza</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="block">
@@ -262,224 +229,5 @@
 <footer class="legal">
   Imágenes de proyecto: las terminaciones definitivas pueden diferir en detalles. Las superficies son orientativas, están sujetas a confirmación y no constituyen oferta.
 </footer>
-
-<div class="privado-toggle">
-  <button onclick="togglePrivado()" id="privado-toggle-btn">Acceso privado</button>
-</div>
-
-<div id="privado" class="open">
-  <div id="privado-lock" style="display: none;">
-    <div class="lock-card">
-      <h3>Panel privado</h3>
-      <p>Información interna del proyecto: presupuesto, gastos, avance y precios por unidad. Solo para vos.</p>
-      <input type="password" id="pass-input" placeholder="Contraseña" onkeydown="if(event.key==='Enter')intentarAcceso()">
-      <div class="lock-error" id="lock-error" style="display: none;">Contraseña incorrecta.</div>
-      <button class="primary" onclick="intentarAcceso()">Ingresar</button>
-    </div>
-  </div>
-
-  <div id="privado-panel" class="open">
-    <div class="card">
-      <h3>Resumen financiero</h3>
-      <div class="stat-priv" id="stat-priv"><div class="box"><div class="label">Costo total estimado</div><div class="value num">USD 3.289.000</div></div><div class="box"><div class="label">Superficie total</div><div class="value num">2.530 m²</div></div><div class="box"><div class="label">Costo por m²</div><div class="value num">USD 1.300</div></div><div class="box"><div class="label">Tipo de cambio de referencia</div><div class="value num">1300 ARS/USD</div></div><div class="box"><div class="label">Ingresos registrados</div><div class="value num">ARS 1.084.088.799</div></div><div class="box"><div class="label">Gastos registrados</div><div class="value num">ARS 1.053.813.874</div></div><div class="box"><div class="label">Honorarios (incluidos en gastos)</div><div class="value num">ARS 73.252.405</div></div><div class="box"><div class="label">Saldo actual</div><div class="value num">-ARS 41.829.207</div></div></div>
-      <div class="small-note" id="fecha-corte">Datos de la planilla de gastos al 2026-08-25.</div>
-    </div>
-
-    <div class="card">
-      <h3>Precios por unidad</h3>
-      <p class="small-note" id="condiciones-venta" style="margin-top:0;">Base de cálculo: USD 3200/m², 25% de anticipo, 240 cuotas.</p>
-      <table class="price-table">
-        <thead><tr><th>Piso</th><th>Unidad</th><th>m²</th><th>Precio USD</th><th>Anticipo USD</th><th>Cuota USD</th></tr></thead>
-        <tbody id="tabla-unidades"><tr><td>PB</td><td>Local 1 (A)</td><td class="num">29.08</td><td class="num"> 93.056</td><td class="num"> 23.264</td><td class="num"> 291</td></tr><tr><td>PB</td><td>Local 2 (B)</td><td class="num">27.56</td><td class="num"> 88.192</td><td class="num"> 22.048</td><td class="num"> 276</td></tr><tr><td>PB</td><td>PB C</td><td class="num">76.29</td><td class="num"> 244.128</td><td class="num"> 61.032</td><td class="num"> 763</td></tr><tr><td>1°</td><td>1A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>1°</td><td>1B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>1°</td><td>1C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>2°</td><td>2A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>2°</td><td>2B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>2°</td><td>2C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>3°</td><td>3A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>3°</td><td>3B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>3°</td><td>3C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>4°</td><td>4A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>4°</td><td>4B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>4°</td><td>4C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>5°</td><td>5A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>5°</td><td>5B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>5°</td><td>5C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>6°</td><td>6A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>6°</td><td>6B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>6°</td><td>6C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>7°</td><td>7A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>7°</td><td>7B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>7°</td><td>7C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>8°</td><td>8A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>8°</td><td>8B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>8°</td><td>8C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>9°</td><td>9A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>9°</td><td>9B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>9°</td><td>9C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>10°</td><td>10A</td><td class="num">60.25</td><td class="num"> 192.800</td><td class="num"> 48.200</td><td class="num"> 602</td></tr><tr><td>10°</td><td>10B</td><td class="num">60.93</td><td class="num"> 194.976</td><td class="num"> 48.744</td><td class="num"> 609</td></tr><tr><td>10°</td><td>10C</td><td class="num">52.71</td><td class="num"> 168.672</td><td class="num"> 42.168</td><td class="num"> 527</td></tr><tr><td>11°</td><td>11A</td><td class="num">124.62</td><td class="num"> 398.784</td><td class="num"> 99.696</td><td class="num"> 1.246</td></tr><tr><td>11°</td><td>11B</td><td class="num">57.34</td><td class="num"> 183.488</td><td class="num"> 45.872</td><td class="num"> 573</td></tr><tr><td>12°</td><td>12A</td><td class="num">85.14</td><td class="num"> 272.448</td><td class="num"> 68.112</td><td class="num"> 851</td></tr><tr><td>12°</td><td>12B</td><td class="num">50.14</td><td class="num"> 160.448</td><td class="num"> 40.112</td><td class="num"> 501</td></tr></tbody>
-      </table>
-    </div>
-
-    <div class="card">
-      <h3>Distribución del presupuesto</h3>
-      <ul class="plain" id="dist-presupuesto"><li>Obras gruesas (estructura, mampostería, contrapisos, revoques, aislaciones, techos): 33% (~USD 430/m²)</li><li>Instalaciones (eléctrica, sanitaria, incendio, gas, climatización, calefacción, ascensores): 24%</li><li>Terminaciones (yesería, pisos, zócalos, revestimientos, pintura, marmolería, vidrios): 24%</li><li>Carpinterías y herrería: 12%</li><li>Preliminares, equipamiento y otros gastos: 7%</li></ul>
-    </div>
-
-    <div class="card">
-      <h3>Principales categorías de gasto (acumulado)</h3>
-      <div id="top-gastos"><div class="row-item"><span>Hormigón armado (mano de obra)</span><span class="neg num">-ARS 384.374.956</span></div><div class="row-item"><span>Hormigón armado (materiales)</span><span class="neg num">-ARS 257.869.582</span></div><div class="row-item"><span>Albañilería (mano de obra)</span><span class="neg num">-ARS 141.384.750</span></div><div class="row-item"><span>Honorarios profesionales</span><span class="neg num">-ARS 73.252.405</span></div><div class="row-item"><span>Movimiento de suelos</span><span class="neg num">-ARS 44.745.800</span></div><div class="row-item"><span>Plusvalía</span><span class="neg num">-ARS 37.702.359</span></div><div class="row-item"><span>Albañilería (materiales)</span><span class="neg num">-ARS 36.549.656</span></div><div class="row-item"><span>Instalación sanitaria (mano de obra)</span><span class="neg num">-ARS 27.000.000</span></div><div class="row-item"><span>Derechos de construcción</span><span class="neg num">-ARS 20.252.810</span></div><div class="row-item"><span>Carpintería de madera</span><span class="neg num">-ARS 17.850.189</span></div></div>
-    </div>
-
-    <div class="card">
-      <h3>Ritmo de desembolsos</h3>
-      <p class="lede" id="dist-temporal" style="margin:0;">Los desembolsos están concentrados entre el 1er y 4to trimestre de 2026: los tres primeros trimestres de 2026 suman ~60% del presupuesto total, con pico en el 2do trimestre de 2026 (&gt;21%). Después del 1er trimestre de 2027 casi no hay salidas de fondos previstas.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hitos del plan</h3>
-      <div id="hitos"><div class="row-item"><span>Finalización de hormigón estructural</span><span>Q2 2026</span></div><div class="row-item"><span>Cierre de etapa de instalaciones principales</span><span>Q4 2026</span></div><div class="row-item"><span>Inicio de terminaciones interiores</span><span>Q3 2026</span></div><div class="row-item"><span>Culminación de todas las terminaciones</span><span>Q1 2027</span></div><div class="row-item"><span>Entrega final</span><span>Octubre 2027</span></div></div>
-      <p class="small-note" id="nota-entrega">Fecha de entrega fijada en octubre de 2027.</p>
-    </div>
-
-    <div class="card">
-      <h3>Recomendaciones</h3>
-      <ul class="plain" id="recomendaciones"><li>Estructura y obras gruesas concentran ~33% del presupuesto: es la partida con mayor efecto sobre el resultado final.</li><li>~75% de los desembolsos cae en 2026: conviene asegurar el financiamiento para cubrir ese pico.</li><li>El supuesto de USD 1.300/m² debe revisarse periódicamente contra precios de mercado.</li><li>El tipo de cambio de referencia (1.300 ARS/USD) expone el proyecto a riesgo cambiario; evaluar coberturas en moneda dura.</li><li>Conviene adelantar compras de materiales e instalaciones para asegurar precio y disponibilidad.</li></ul>
-      <p class="small-note" id="fuente-nota">Fuente: Reporte de avance e inversión del proyecto, planilla de gastos (25/08/2026) y planilla de unidades y precios.. Actualizado al 2026-09-10.</p>
-    </div>
-
-    <details class="change-pass" open="">
-      <summary>Cambiar contraseña</summary>
-      <div class="inner">
-        <input type="password" id="new-pass-1" placeholder="Nueva contraseña">
-        <input type="password" id="new-pass-2" placeholder="Repetir nueva contraseña">
-        <button class="primary" onclick="cambiarContrasena()">Guardar y descargar archivo actualizado</button>
-        <p class="small-note">Esto genera una copia nueva de este mismo archivo, ya protegida con la nueva contraseña. Reemplazá el archivo viejo por el descargado, y no compartas esta versión con compradores.</p>
-      </div>
-    </details>
-  </div>
-</div>
-
-<script>
-const PRIVATE_BLOB = {"salt":"dce7rwmeMd1x5oqiPriQKA==","iv":"O57L3ZisPSvO6oh1","ciphertext":"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","iterations":100000};
-
-function togglePrivado(){
-  const el = document.getElementById('privado');
-  el.classList.toggle('open');
-  if(el.classList.contains('open')){
-    el.scrollIntoView({behavior:'smooth', block:'start'});
-  }
-}
-
-function b64ToBytes(b64){
-  const bin = atob(b64);
-  const bytes = new Uint8Array(bin.length);
-  for(let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
-  return bytes;
-}
-function bytesToB64(bytes){
-  let bin = '';
-  bytes.forEach(b => bin += String.fromCharCode(b));
-  return btoa(bin);
-}
-
-async function deriveKey(password, saltBytes, iterations, usage){
-  const enc = new TextEncoder();
-  const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
-  return crypto.subtle.deriveKey(
-    { name:'PBKDF2', salt:saltBytes, iterations:iterations, hash:'SHA-256' },
-    keyMaterial,
-    { name:'AES-GCM', length:256 },
-    false,
-    [usage]
-  );
-}
-
-let decryptedData = null;
-
-async function intentarAcceso(){
-  const pass = document.getElementById('pass-input').value;
-  const errEl = document.getElementById('lock-error');
-  errEl.style.display = 'none';
-  try{
-    const salt = b64ToBytes(PRIVATE_BLOB.salt);
-    const iv = b64ToBytes(PRIVATE_BLOB.iv);
-    const ciphertext = b64ToBytes(PRIVATE_BLOB.ciphertext);
-    const key = await deriveKey(pass, salt, PRIVATE_BLOB.iterations, 'decrypt');
-    const plainBuf = await crypto.subtle.decrypt({name:'AES-GCM', iv:iv}, key, ciphertext);
-    const plainText = new TextDecoder().decode(plainBuf);
-    decryptedData = JSON.parse(plainText);
-    mostrarPanel(decryptedData);
-    document.getElementById('privado-lock').style.display = 'none';
-    document.getElementById('privado-panel').classList.add('open');
-  }catch(e){
-    errEl.style.display = 'block';
-  }
-}
-
-function money(n, currency){
-  const abs = Math.abs(Math.round(n));
-  const sign = n < 0 ? '-' : '';
-  const formatted = abs.toLocaleString('es-AR');
-  return sign + (currency || '') + ' ' + formatted;
-}
-
-function mostrarPanel(data){
-  const r = data.resumen;
-  document.getElementById('stat-priv').innerHTML = [
-    ['Costo total estimado', money(r.costoTotalEstimadoUSD,'USD')],
-    ['Superficie total', r.superficieTotalM2.toLocaleString('es-AR') + ' m²'],
-    ['Costo por m²', money(r.costoPorM2USD,'USD')],
-    ['Tipo de cambio de referencia', r.tipoCambioReferenciaARS + ' ARS/USD'],
-    ['Ingresos registrados', money(r.ingresosRegistradosARS,'ARS')],
-    ['Gastos registrados', money(r.gastosRegistradosARS,'ARS')],
-    ['Honorarios (incluidos en gastos)', money(r.honorariosIncluidosARS,'ARS')],
-    ['Saldo actual', money(r.saldoActualARS,'ARS')]
-  ].map(([label,value]) => `<div class="box"><div class="label">${label}</div><div class="value num">${value}</div></div>`).join('');
-  document.getElementById('fecha-corte').textContent = 'Datos de la planilla de gastos al ' + r.fechaCorte + '.';
-
-  const cv = data.condicionesVenta;
-  document.getElementById('condiciones-venta').textContent =
-    `Base de cálculo: USD ${cv.usdPorM2}/m², ${cv.anticipoPct}% de anticipo, ${cv.cuotas} cuotas.`;
-
-  document.getElementById('tabla-unidades').innerHTML = data.unidades.map(u => {
-    if(!u.disponible){
-      return `<tr class="no-disp"><td>${u.piso}</td><td>${u.unidad}</td><td class="num">${u.m2.toFixed(2)}</td><td colspan="3">No disponible</td></tr>`;
-    }
-    return `<tr><td>${u.piso}</td><td>${u.unidad}</td><td class="num">${u.m2.toFixed(2)}</td><td class="num">${money(u.precioUSD)}</td><td class="num">${money(u.anticipoUSD)}</td><td class="num">${money(u.cuotaUSD)}</td></tr>`;
-  }).join('');
-
-  document.getElementById('dist-presupuesto').innerHTML = data.distribucionPresupuesto.map(g =>
-    `<li>${g.grupo}: ${g.pct}%${g.usdM2 ? ' (~USD ' + g.usdM2 + '/m²)' : ''}</li>`
-  ).join('');
-
-  document.getElementById('top-gastos').innerHTML = data.topCategoriasGastoARS.map(c =>
-    `<div class="row-item"><span>${c.categoria}</span><span class="neg num">${money(c.monto,'ARS')}</span></div>`
-  ).join('');
-
-  document.getElementById('dist-temporal').textContent = data.distribucionTemporal;
-
-  document.getElementById('hitos').innerHTML = data.hitos.map(h =>
-    `<div class="row-item"><span>${h.hito}</span><span>${h.periodo}</span></div>`
-  ).join('');
-  document.getElementById('nota-entrega').textContent = data.notaEntrega;
-
-  document.getElementById('recomendaciones').innerHTML = data.recomendaciones.map(x => `<li>${x}</li>`).join('');
-  document.getElementById('fuente-nota').textContent = 'Fuente: ' + data.fuente + '. Actualizado al ' + data.actualizadoAl + '.';
-}
-
-async function cambiarContrasena(){
-  const p1 = document.getElementById('new-pass-1').value;
-  const p2 = document.getElementById('new-pass-2').value;
-  if(!p1 || p1.length < 6){ alert('La nueva contraseña debe tener al menos 6 caracteres.'); return; }
-  if(p1 !== p2){ alert('Las contraseñas no coinciden.'); return; }
-  if(!decryptedData){ alert('Primero ingresá con la contraseña actual.'); return; }
-
-  const enc = new TextEncoder();
-  const salt = crypto.getRandomValues(new Uint8Array(16));
-  const iv = crypto.getRandomValues(new Uint8Array(12));
-  const iterations = 100000;
-  const key = await deriveKey(p1, salt, iterations, 'encrypt');
-  const plainBytes = enc.encode(JSON.stringify(decryptedData));
-  const cipherBuf = await crypto.subtle.encrypt({name:'AES-GCM', iv:iv}, key, plainBytes);
-
-  const newBlob = {
-    salt: bytesToB64(salt),
-    iv: bytesToB64(iv),
-    ciphertext: bytesToB64(new Uint8Array(cipherBuf)),
-    iterations: iterations
-  };
-
-  const newHtml = document.documentElement.outerHTML.replace(
-    /const PRIVATE_BLOB = [\s\S]*?;/,
-    'const PRIVATE_BLOB = ' + JSON.stringify(newBlob) + ';'
-  );
-  const fullHtml = '<!DOCTYPE html>\n' + newHtml;
-  const blob = new Blob([fullHtml], {type:'text/html'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'pedro-i-rivera-5026.html';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  alert('Se descargó la versión actualizada con la nueva contraseña. Guardala y reemplazá el archivo anterior.');
-}
-</script>
-
-
 
 </body></html>
